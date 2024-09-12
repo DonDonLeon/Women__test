@@ -97,7 +97,6 @@ ul{
     transition: .6s;
     border: 1px solid #5C8694;
     border-radius: 30px;
-    max-width: 400px;
 }
 
 .menu-item {
@@ -110,10 +109,6 @@ ul{
     font-weight: 400;
     font-size: 14px;
     font-family: "Inter", sans-serif; 
-}
-
-.menu-item:hover {
-    background: rgba(255,255,255,.1)
 }
 
 .burger-checkbox:checked ~ .menu-list {
@@ -274,7 +269,7 @@ ul{
     font-family: "Inter", sans-serif;
 }
 
-.progress__info h2{
+.progress__info h4{
     font-size: 40px;
     font-family: "Inter", sans-serif;
     font-weight: 600;
@@ -396,18 +391,7 @@ ul{
     display: flex;
     overflow: auto;
     border-radius: 5px;
-    padding-bottom: 42px;
-}
-
-.slide{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: white;
-    border-radius: 4px;
-    max-width: 584px;
-    margin-right: 15px;
-    min-height: 424px;
+    width: 100%;
 }
 
 .review__box{
@@ -464,9 +448,20 @@ ul{
 }
 
 .slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 4px;
+    max-width: 100%;
+    margin-right: 15px;
+    min-height: 424px;
     border-radius: 5px;
     padding: 30px;
+    margin-bottom: 15px;
 }
+
+
 
 .footer__box{
     display: flex;
@@ -614,19 +609,15 @@ ul{
     font-family: "Inter", sans-serif; 
 }
 
+
+.header__link-menu{
+    display: none;
+}
+
 @media(max-width:1670px) {
     .about__main{
       flex-wrap: wrap;  
       justify-content: center;
-    }
-
-    .review__slider{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .slide{
-        margin-bottom: 15px;
     }
 
     .review__box{
@@ -635,7 +626,7 @@ ul{
     }
 
     .about__box-2{
-        margin: 30px 0 151px 0;
+        display: none;
     }
 
     .title{
@@ -645,9 +636,7 @@ ul{
     .box__adaptive{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        align-content: center;
     }
 }
 
@@ -675,7 +664,7 @@ ul{
 
 @media (max-width:1165px){
     .slide{
-        margin-right: 0px; 
+        margin-right: 15px; 
     }
 
     .footer__box{
@@ -708,32 +697,55 @@ ul{
 }
 
 @media (max-width:920px) {
-    .header__inner{
-        flex-direction:column;
-    }
-
     .header{
         margin-top: 35px;
         margin-bottom: 45px;
     }
-    
-    .header__logo{
-        padding: 17px 0;
-    } 
 
     .about__main{
         padding-top: 20px;
     }
-    
-    .menu{
-      align-self: flex-end;
-      padding-right: 20px;
+
+    .header__logo{
+        order: 3;
+    }
+
+    .header__link{
+        display: none;
+    }
+
+    .header__link-menu{
+        display: flex;
+        justify-content: center;
     }
 
     .menu-list{
         transform: translateY(-230%);
-        margin-left: 20px;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        z-index: 1000;
+        margin-top: 200px;
+        padding-top: 190px;
+        border: none;
+        align-content: center;
+        box-shadow: 1.5px 19px 59px gray;
     }   
+
+    .menu-item{
+        background-color: #5C8694;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        color:white;
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .menu-item:hover{
+        background-color: #2c4750;
+    }
+
     .burger-checkbox:checked ~ .menu-list {
         transform: translateY(-39px);
     }
@@ -777,15 +789,8 @@ ul{
 }
 
 @media(max-width:600px){
-    .slide{
-        display: flex;
-        flex-direction: column;
-        margin-right: 0;
-    }
-
     .slide__center{
-        max-width: 510px;
-        width: 100%;
+        max-width: 300px;
     }
 
     .review__box h1 {
