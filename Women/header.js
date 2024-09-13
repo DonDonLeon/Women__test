@@ -1,33 +1,33 @@
 const mediaQuery1 = window.matchMedia('(max-width: 1165px)')
 const mediaQuery2 = window.matchMedia('(max-width: 920px)')
 
-{
-    const element = document.getElementById('header__logo-id')
-    const inlineStyles = element.style
+// {
+//     const element = document.getElementById('header__logo-id')
+//     const inlineStyles = element.style
 
-    const callback_hidden = () => {
-        element.setAttribute('style', 'visibility:hidden;')
-    }
+//     const callback_right = () => {
+//         element.setAttribute('style', 'margin-left:auto;')
+//     }
 
-    const callback_visible = () => {
-        element.setAttribute('style', 'visibility:visible;')
-    }
+//     const callback_left = () => {
+//         element.setAttribute('style', 'visibility:visible;')
+//     }
 
-    if (mediaQuery2.matches) {
-        const burger = document.querySelector('#burger__main');
-        burger.addEventListener('click', callback_visible);
-    }
+//     if (mediaQuery2.matches) {
+//         const burger = document.querySelector('#burger__main');
+//         burger.addEventListener('click', callback_right);
+//     }
 
-    else if (mediaQuery1.matches) {
-        const burger = document.querySelector('#burger__main');
-        burger.addEventListener('click', callback_hidden);
-    }
+//     else if (mediaQuery1.matches) {
+//         const burger = document.querySelector('#burger__main');
+//         burger.addEventListener('click', callback_left);
+//     }
 
-    else{
-        const burger = document.querySelector('#burger__main');
-        burger.addEventListener('click', callback_visible);
-    }
-}
+//     else{
+//         const burger = document.querySelector('#burger__main');
+//         burger.addEventListener('click', callback_right);
+//     }
+// }
 
 {
     const element_main = document.getElementById('burger__main')

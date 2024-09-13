@@ -43,7 +43,7 @@ ul{
     position: relative;
     border: none;
     color: #5C8694;
-    width: 23px;
+    width: 30px;
     height: 26px;
 }
 
@@ -135,7 +135,6 @@ ul{
     transition: .6s;
     border: 1px solid white;
     background-color: #5C8694;
-    border-radius: 30px;
 }
 
 .menu-list label{
@@ -155,7 +154,7 @@ ul{
 }
 
 .burger-checkbox:checked ~ .menu-list {
-    transform: translateX(120px);
+    transform: translateX(5vw);
 }
   
 .header__inner{
@@ -702,6 +701,10 @@ ul{
     .progress__inner{
         flex-wrap: wrap;
     }
+
+    .header__logo{
+        margin-left: auto;
+    }
 }
 
 @media(max-width:1460){
@@ -750,12 +753,18 @@ ul{
         margin-top: 35px;
     }
 
+    .header__inner{
+        flex-direction: row-reverse;
+    }
+
     .menu-list label{
         display: block;
+        align-self: flex-end;
     }
 
     .header__logo{
-        order: 3;
+        order: 1;
+        margin-left: 0;
     }
 
     .header__link{
@@ -774,11 +783,10 @@ ul{
         transform: translateY(-230%);
         position: fixed;
         width: 100%;
-        height: 80%;
+        inset: 10px 0;
+        height: 100%;
         background-color: white;
         z-index: 1000;
-        margin-top: 200px;
-        padding: 40px;
         border: none;
         align-content: left;
         box-shadow: 1.5px 19px 59px gray;
