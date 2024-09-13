@@ -16,13 +16,15 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
+                
                 <div class="menu">
                     <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
-                    <label for="burger-checkbox" class="burger"></label>
+                    <label for="burger-checkbox" class="burger" id="burger__main"></label>
                     <ul class="menu-list">
-                        <li><a href="#about" class="menu-item">ABOUT</a><li>
-                        <li><a href="#progress" class="menu-item">PROGRESS</a><li>
-                        <li><a href="#events" class="menu-item">EVENTS</a><li>
+                        <label for="burger-checkbox" class="burger__add" id="burger__add"></label>
+                        <li><a href="#about" class="menu-item">ABOUT</a></li>
+                        <li><a href="#progress" class="menu-item">PROGRESS</a></li>
+                        <li><a href="#events" class="menu-item">EVENTS</a></li>
                         <li><a href="#review" class="menu-item">REVIEWS</a></li>
                         <div class="header__link-menu">
                             <div class="img__cover">
@@ -33,39 +35,33 @@
                                 </div>
                             </div>
                             <div class="img__cover">
-                                <div class="img__link">
-                                    <a href="#" class="header__in">
-                                        <img src="img/in.svg" alt="in">
-                                    </a>
-                                </div>
+                                <a href="#" class="header__in">
+                                    <img src="img/in.svg" alt="in">
+                                </a>
                             </div>
-                            <a href="#" class="header__register"></a>
-                                <button class="button__register">REGISTER</button>
-                            </a>
+                            <button class="button__register">REGISTER</button>
                         </div>
                     </ul>
                 </div>
 
-                <div class="header__logo">
+                <div class="header__logo" id="header__logo-id">
                     <img src="img/logo.jpg" alt="LOGO" class="first__logo">
                 </div>
+
                 <div class="header__link">
                     <div class="img__cover">
-                        <div class="img__link">
-                            <a href="#" class="header__whatsupo">
-                                <img src="img/whatsup.svg" alt="whatsup">
-                            </a>
-                        </div>
+                        <a href="#" class="header__whatsupo">
+                            <img src="img/whatsup.svg" alt="whatsup">
+                        </a>
                     </div>
                     <div class="img__cover">
-                        <div class="img__link">
-                            <a href="#" class="header__in">
-                                <img src="img/in.svg" alt="in">
-                            </a>
-                        </div>
+                        <a href="#" class="header__in">
+                            <img src="img/in.svg" alt="in">
+                        </a>
                     </div>
                     <button class="button__register">REGISTER</button>
                 </div>
+
             </div>  
         </div>
     </header>
@@ -158,77 +154,108 @@
     <section class="slider">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="img/imgSlider/first.svg" alt="">
+                
+                <div class="swiper-slide" style="display: flex; width: 2000px;">
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/first.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/second.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/third.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/four.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/five.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/six.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/seven.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/eigth.svg" alt="">
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/imgSlider/second.svg" alt="">
+
+                <div class="swiper-slide" style="display: flex; ">
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/first.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/second.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/third.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/four.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/five.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/six.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/seven.svg" alt="">
+                    </div>
+                    <div class="swiper-img">
+                        <img src="img/imgSlider/eigth.svg" alt="">
+                    </div>
                 </div>
-                <div class="swiper-slide">
-                    <img src="img/imgSlider/third.svg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/imgSlider/four.svg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/imgSlider/five.svg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/imgSlider/six.svg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/imgSlider/seven.svg" alt="">
-                </div>
-                <div class="swiper-slide">
-                    <img src="img/imgSlider/eigth.svg" alt="">
-                </div>
+
             </div>
         </div>
     </section>
 
     <section class="events" id="events">
         <div class="container">
-            <p class="title">EVENTS</p>
+            <h2 class="title">EVENTS</h2>
 
             <div class="main__events">
                 <div class="events__inner">
                     <img src="img/events/image 31.jpg" alt="" class="img__inner">
-                    <h2 class="events__title">Invitation from Mishcon and Women Who Inspire – Kindness in Leadership</h2>
+                    <h3 class="events__title">Invitation from Mishcon and Women Who Inspire – Kindness in Leadership</h3>
                     <p class="events__text">Leading women from a variety of industries will discuss the importance of kind leadership and share their experiences of kindness as a part of progressive business culture.</p>
                     <p class="events__subtext">When: Thursday 7 March 2018 <br>
                         Where: Africa House, 70 Kingsway, London, WC2B 6AH </p>
                 </div>
                 <div class="events__inner">
                     <img src="img/events/image 32.jpg" alt="" class="img__inner">
-                    <h2 class="events__title">Women's Summer Party</h2>
+                    <h3  class="events__title">Women's Summer Party</h3>
                     <p class="events__text">Leading women from a variety of industries will discuss the importance of kind leadership and share their experiences of kindness as a part of progressive business culture.</p>
                     <p class="events__subtext">When: Thursday 7 March 2018<br>
                         Where: Africa House, 70 Kingsway,  London, WC2B 6AH</p>
                 </div>
                 <div class="events__inner">
                     <img src="img/events/image 33.jpg" alt="" class="img__inner">
-                    <h2 class="events__title">We invite you to a business breakfast</h2>
+                    <h3 class="events__title">We invite you to a business breakfast</h3>
                     <p class="events__text">Elizaveta will talk about how to keep up with the growth of your company or career and not forget to eat. Will share personal experience of business development and interesting client stories.</p>
                     <p class="events__subtext">When: Thursday 7 March 2018<br>
                         Where: Africa House, 70 Kingsway,  London, WC2B 6AH </p>
                 </div>
                 <div class="events__inner">
                     <img src="img/events/image 34.jpg" alt="" class="img__inner">
-                    <h2 class="events__title">International Women's Day</h2>
+                    <h3 class="events__title">International Women's Day</h3>
                     <p class="events__text">Leading women from a variety of industries will discuss the importance of kind leadership and share their experiences of kindness as a part of progressive business culture.</p>
                     <p class="events__subtext">When: Thursday 7 March 2018 <br>
                         Where: Africa House, 70 Kingsway, London, WC2B 6AH</p>
                 </div>
                 <div class="events__inner">
                     <img src="img/events/image 35.jpg" alt="" class="img__inner">
-                    <h2 class="events__title">Anglorussian family law seminar and  wine tasting</h2>
+                    <h3 class="events__title">Anglorussian family law seminar and  wine tasting</h3>
                     <p class="events__text">Penningtons Manches is delighted to invite you to an Anglo­Russian family law seminar</p>
                     <p class="events__subtext">When: Thursday 7 March 2018
                         Where: Africa House, 70 Kingsway, London, WC2B 6AH</p>
                 </div>
                 <div class="events__inner">
                     <img src="img/events/image 36.jpg" alt="" class="img__inner">
-                    <h2 class="events__title">Private Brunch</h2>
+                    <h3 class="events__title">Private Brunch</h3>
                     <p class="events__text">Women Who Inspire in partnership with Sterling & Law Associates LLP</p>
                     <p class="events__subtext">When: Thursday 7 March 2018
                         Where:Africa House, 70 Kingsway, London, WC2B 6AH </p>
@@ -296,8 +323,8 @@
         <div class="container">
             <div class="box__adaptive">
                 <div class="review__box">
-                <h1>We generate a huge positive energy 
-                    which encourages <span>the people who are with us to create</span></h1>
+                <h2>We generate a huge positive energy 
+                    which encourages <span>the people who are with us to create</span></h2>
                 </div>
                 <div class="review__slider">
                 <div class="slide">
@@ -406,28 +433,28 @@
                 </div>
                 <div class="footer__about">
                     <ul class="footer__list">
-                        <li class="footer__li">About</li>
-                        <li class="footer__li">Events</li>
-                        <li class="footer__li">Supporters</li>
-                        <li class="footer__li">Members</li>
-                        <li class="last__elem-1">WhatsApp</li>
+                        <a href="#"><li class="footer__li">About</li></a>
+                        <a href="#"><li class="footer__li">Events</li></a>
+                        <a href="#"><li class="footer__li">Supporters</li></a>
+                        <a href="#"><li class="footer__li">Members</li></a>
+                        <a href="#" class="last__elem-1"><li>WhatsApp</li></a>
                     </ul>
                 </div>
                 <div class="footer__about">
                     <ul class="footer__list">
-                        <li class="footer__li">Gallery</li>
-                        <li class="footer__li">Next Gen</li>
-                        <li class="footer__li">Reviews</li>
-                        <li class="last__elem-2">LinkedIn</li>
+                        <a href="#"><li class="footer__li">Gallery</li></a>
+                        <a href="#"><li class="footer__li">Next Gen</li></a>
+                        <a href="#"><li class="footer__li">Reviews</li></a>
+                        <a href="#" class="last__elem-2"><li>LinkedIn</li></a>
                     </ul>
                 </div>
                 <div class="footer__email">
-                    <h1>Subscribe to our newsletter</h1>
+                    <h2>Subscribe to our newsletter</h2>
                     <div>
                         <input type="text" placeholder="Enter Your Email" class="form-control" name="search">
                         <span class="input-group-btn">
                           <button type="submit" class="btn btn-default">
-                            <span><a href=""><img src="img/arrow-right.svg" alt=""></a></span>
+                            <img src="img/arrow-right.svg" alt="">
                           </button>
                         </span>
                     </div>
@@ -441,7 +468,8 @@
     </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="swiper.js"></script>    
+<script src="swiper.js"></script>
+<script src="header.js"></script>        
 <script src="showmore.js"></script>
 </body>
 </html>

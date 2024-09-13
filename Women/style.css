@@ -20,7 +20,7 @@ a {
     color:inherit;
     text-decoration: none;
 }
-  
+
 ul{
     list-style-type: none;
 }
@@ -46,6 +46,44 @@ ul{
     width: 23px;
     height: 26px;
 }
+
+.burger__add {
+    z-index: 1;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    color: #5C8694;
+    width: 23px;
+    height: 26px;
+    margin-bottom: 20px;
+}
+
+.burger__add::before,
+.burger__add::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 23px;
+    height: 4px;
+    border-radius: 10px;
+    background: #5C8694;
+}
+
+.burger__add::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .4s, transform .4s .15s;
+}
+
+.burger__add::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .4s, transform .4s .15s;
+}
+
 
 .burger::before,
 .burger::after {
@@ -95,14 +133,19 @@ ul{
     list-style-type: none;
     transform: translateX(-100%);
     transition: .6s;
-    border: 1px solid #5C8694;
+    border: 1px solid white;
+    background-color: #5C8694;
     border-radius: 30px;
+}
+
+.menu-list label{
+    display: none;
 }
 
 .menu-item {
     display: block;
     padding: 8px;
-    color:#5C8694;
+    color:white;
     font-size: 18px;
     text-align: center;
     text-decoration: none;
@@ -112,7 +155,7 @@ ul{
 }
 
 .burger-checkbox:checked ~ .menu-list {
-    transform: translateX(140px);
+    transform: translateX(120px);
 }
   
 .header__inner{
@@ -139,7 +182,7 @@ ul{
     margin-right: 10px;
 }
 
-.img__link{
+.img__cover img{
     margin-left: 17px;
     margin-top: 17px;
 }
@@ -400,7 +443,7 @@ ul{
     margin-bottom: 50px;
 }
 
-.review__box h1{
+.review__box h2{
     max-width: 888px;
     font-size: 40px;
     font-weight: 400;
@@ -537,7 +580,7 @@ ul{
      background-color: transparent;
 }
 
-.footer__email h1{
+.footer__email h2{
     font-size: 32px;
     font-weight: 600;
     font-family: "Lora", serif;
@@ -558,20 +601,32 @@ ul{
     border-top: 1px solid #5C869433;
 }
 
+.swiper-wrapper{
+    transition-timing-function : linear;
+}
+
 .swiper {
     width: 100%;
     height: 100%;
 }
 
-.swiper-slide {
-    text-align: center;
+.swiper-slide{
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.swiper-img {
+    max-width: 120px;
+    height: 60px;
+    align-items: center;
     align-content: center;
 }
 
-.swiper-slide img {
-    padding: 0px 36px;
-    width: 200px;
-    height: 50px;
+.swiper-img img {
+    max-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .swiper-slide img:hover {
@@ -609,9 +664,12 @@ ul{
     font-family: "Inter", sans-serif; 
 }
 
-
 .header__link-menu{
     display: none;
+}
+
+.burger__main{
+    display: block;
 }
 
 @media(max-width:1670px) {
@@ -643,15 +701,6 @@ ul{
 @media(max-width:1490px){
     .progress__inner{
         flex-wrap: wrap;
-    }
-    .menu-list{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
-
-    .burger-checkbox:checked ~ .menu-list {
-        transform: translateX(106px);
     }
 }
 
@@ -699,11 +748,10 @@ ul{
 @media (max-width:920px) {
     .header{
         margin-top: 35px;
-        margin-bottom: 45px;
     }
 
-    .about__main{
-        padding-top: 20px;
+    .menu-list label{
+        display: block;
     }
 
     .header__logo{
@@ -720,18 +768,25 @@ ul{
     }
 
     .menu-list{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
         transform: translateY(-230%);
         position: fixed;
         width: 100%;
-        height: 100%;
+        height: 80%;
         background-color: white;
         z-index: 1000;
         margin-top: 200px;
-        padding-top: 190px;
+        padding: 40px;
         border: none;
-        align-content: center;
+        align-content: left;
         box-shadow: 1.5px 19px 59px gray;
-    }   
+    } 
+    
+    .menu-list .burger{
+        margin-bottom: 30px;
+    }
 
     .menu-item{
         background-color: #5C8694;
